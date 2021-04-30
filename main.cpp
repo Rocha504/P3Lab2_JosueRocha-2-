@@ -47,10 +47,29 @@ double desviacion (int arreglo []){
 		des=sqrt(acum/20);
 		return des;
 }
-
+void CB(int arreglo [], int arreglo2 []){
+	char white=177,black=178;
+	for(int i=0;i<10;i++){
+		cout<<i+1;
+		int val1=arreglo[i];
+		int val2=arreglo2[i];
+		
+		for(int x=0;x<val1;x++){
+			cout<<white;
+		}
+		cout<<endl;
+		for(int y=0;y<val2;y++){
+			cout<<black;
+		}
+		cout<<endl;
+	}
+	
+}
 int main(int argc, char** argv) {
 	
 	int op=menu();
+	srand (time(NULL));
+	
 	switch (op){
 		case 1:{
 			 
@@ -71,6 +90,28 @@ int main(int argc, char** argv) {
 		 cout<<"La desviacion poblacional es de: "<<des;
 		}
 		    break;
+		case 3:{
+			int size=10;
+			int arreglo [size];
+			int arreglo2[size];
+			for(int i=0;i<size;i++){
+		 	arreglo[i]=rand() % 20 + 1;
+		 }
+		 for(int i=0;i<size;i++){
+		 	arreglo2[i]=rand() % 20 + 1;
+		 }
+		 for(int x=0;x<size;x++){
+		 	cout<<"["<<arreglo[x]<<"]";
+		 }
+		 cout<<endl;
+		 for(int g=0;g<size;g++){
+		 	cout<<"["<<arreglo2[g]<<"]";
+		 }
+		 cout<<endl;
+		 CB(arreglo,arreglo2);
+		 
+		}
+			break;
 		
 			
 	}
