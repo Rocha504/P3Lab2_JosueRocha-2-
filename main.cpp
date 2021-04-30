@@ -22,7 +22,6 @@ int menu(){
 }
 void TP(int n, int max_n, int res_anterior [], int salida []){
 	
-	 
 	
 }
 double promedio(int arreglo []){
@@ -82,6 +81,7 @@ int main(int argc, char** argv) {
 			 	res_anterior[b]=0;
 			 	salida[b]=0;
 			 }
+			 
 		}
 			break;
 	    case 2:{
