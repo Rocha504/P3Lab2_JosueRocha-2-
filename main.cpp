@@ -1,5 +1,7 @@
 #include <iostream>
 #include <math.h>
+#include <stdlib.h>     
+#include <time.h>  
 
 using std::endl;
 using std::cout;
@@ -55,9 +57,18 @@ int main(int argc, char** argv) {
 		}
 			break;
 	    case 2:{
+	     double des;
 	     int size=20;
 		 int arreglo [size];
-		 
+		 for(int i=0;i<size;i++){
+		 	arreglo[i]=rand() % 100 + 1;
+		 }
+		 for(int x=0;x<size;x++){
+		 	cout<<"["<<arreglo[x]<<"]";
+		 }
+		 cout<<endl;
+		 des=desviacion(arreglo);
+		 cout<<"La desviacion poblacional es de: "<<des;
 		}
 		    break;
 		
