@@ -68,12 +68,20 @@ void CB(int arreglo [], int arreglo2 []){
 }
 int main(int argc, char** argv) {
 	
-	int op=menu();
-	srand (time(NULL));
-	
+    srand (time(NULL));
+    int op=0;
+	while(op!=4){
+    op=menu();
 	switch (op){
 		case 1:{
+			 int n=0,max_n;
+			 int res_anterior [100];
+			 int salida [100];
 			 
+			 for(int b=0;b<100;b++){
+			 	res_anterior[b]=0;
+			 	salida[b]=0;
+			 }
 		}
 			break;
 	    case 2:{
@@ -88,9 +96,9 @@ int main(int argc, char** argv) {
 		 }
 		 cout<<endl;
 		 des=desviacion(arreglo);
-		 cout<<"La desviacion poblacional es de: "<<des;
+		 cout<<"La desviacion poblacional es de: "<<des<<endl;
 		}
-		    break;
+		   break;  
 		case 3:{
 			int size=10;
 			int arreglo [size];
@@ -112,10 +120,15 @@ int main(int argc, char** argv) {
 		 CB(arreglo,arreglo2);
 		 
 		}
+		break;
+		 default:{
 			break;
+		 }
+		 
+		 
 		
 			
 	}
-	
+}
 	return 0;
 }
