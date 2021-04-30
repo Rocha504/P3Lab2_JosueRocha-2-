@@ -55,11 +55,12 @@ void CB(int arreglo [], int arreglo2 []){
 		int val2=arreglo2[i];
 		
 		for(int x=0;x<val1;x++){
-			cout<<white;
+			cout<<black<<" ";
 		}
 		cout<<endl;
+		cout<<" ";
 		for(int y=0;y<val2;y++){
-			cout<<black;
+			cout<<white<<" ";
 		}
 		cout<<endl;
 	}
